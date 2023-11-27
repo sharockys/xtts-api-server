@@ -101,7 +101,7 @@ def set_speaker_folder(speaker_req: SpeakerFolderRequest):
         logger.error(e)
         raise HTTPException(status_code=400, detail=str(e))
 
-@app.post("/tts_to_audio")
+@app.post("/tts_to_audio/")
 async def tts_to_audio(request: SynthesisRequest):
     try:
         # Validate language code against supported languages.
